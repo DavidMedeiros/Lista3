@@ -1,6 +1,6 @@
 package JoguinhoRPG;
 
-public abstract class Papel {
+public class Papel {
 	
 	private double poder;
 	private double defesa;
@@ -10,11 +10,17 @@ public abstract class Papel {
 		this.defesa = defesa;
 	}
 
-	public abstract double ataca();
+	public double ataca(){
+		return getPoder() * -1;
+	}
 	
-	public abstract double defende();
+	public double defende() {
+		return getDefesa();
+	}
 	
-	public abstract double cura();
+	public double cura() {
+		return getPoder();
+	}
 
 	public double getPoder() {
 		return poder;
